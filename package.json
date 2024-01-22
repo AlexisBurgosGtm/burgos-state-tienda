@@ -1,0 +1,27 @@
+{
+  "name": "burgos-state-tienda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mssql": "^4.3.7",
+    "nodemon": "^2.0.12",
+    "socket.io": "^4.2.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisBurgosGtm/burgos-state-tienda.git"
+  },
+  "author": "Alexis Burgos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexisBurgosGtm/issues"
+  },
+  "homepage": "https://github.com/AlexisBurgosGtm/burgos-state-tienda.git"
+}

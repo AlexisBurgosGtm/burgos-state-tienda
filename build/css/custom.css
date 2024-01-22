@@ -1,0 +1,7 @@
+.hand{
+    cursor: pointer;
+};
+
+.hidden{
+    visibility: hidden;
+}
