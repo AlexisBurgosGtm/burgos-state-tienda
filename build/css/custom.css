@@ -1,7 +1,69 @@
-.hand{
+.mapcontainer {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    box-shadow: 5px 5px 5px #888;
+}
+
+
+.btn-left { 
+    position: fixed;
+    z-index: 1088;
+    left: 5px;
+    bottom: 40px;
+  }
+  
+/* BOTON FLOTANTE ESQUINA DERECHA */
+.btn-right{
+  position: fixed;
+  z-index: 888;
+  right: 21px;
+  bottom: 50px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+
+
+.hand {
     cursor: pointer;
 };
 
-.hidden{
+.hidden {
     visibility: hidden;
 }
+
+.oculto {
+    visibility: hidden;
+};
+
+.negrita{
+    font-weight: bold;
+}
+
+section:hover {
+    border-color: rgb(96, 236, 255);
+}
+
+
+
+.card-rounded {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  
+  }
+  
+
+
+
+  
