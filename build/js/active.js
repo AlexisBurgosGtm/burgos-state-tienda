@@ -5,7 +5,7 @@
 
     // :: Preloader
     suhaWindow.on('load', function () {
-        $('#preloader').fadeOut('1000', function () {
+        $('#preloader').fadeOut('1500', function () {
             $(this).remove();
         });
     });

@@ -120,7 +120,7 @@ function cargar_proyectos(){
             
             cards += `
             <div class="col-12 col-md-6">
-                <section class="card card-rounded horizontal-product-card shadow">
+                <section class="card card-rounded border-especial horizontal-product-card shadow-especial">
                     <div class="card-body d-flex align-items-center">
                       <div class="product-thumbnail-side">
                           <a class="product-thumbnail d-block" href="#">

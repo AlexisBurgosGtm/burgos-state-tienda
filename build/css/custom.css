@@ -32,7 +32,7 @@
     position: fixed;
     z-index: 888;
     right: 15px;
-    top: 80px;
+    top: 85px;
 }
 
 .btn-circle {
@@ -76,13 +76,6 @@ section:hover {
     border-color: rgb(96, 236, 255);
 }
 
-.btn-hover {
-    
-}
-
-btn-hover:hover{
-    border-color: rgb(236, 19, 37);
-}
 
 .card-rounded {
     border-top-right-radius: 15px;
@@ -95,4 +88,80 @@ btn-hover:hover{
 
 
 
+/*********************************************/
+
+.shadow-especial{
+  
+  box-shadow: 5px 5px 5px 1px rgb(204, 227, 253);
+}
+
+.border-especial{
+    border-color: rgb(15, 90, 175);
+}
+
+.text-especial{
+    color: rgb(15, 90, 175);
+}
+
+.bg-especial{
+    background: rgb(15, 90, 175);
+}
+
+
+.btn-especial {
+  color: #fff;
+  background-color: rgb(15, 90, 175);
+  border-color:  rgb(15, 90, 175)}
+  .btn-especial:hover {
+    color: #fff;
+    background-color: rgb(15, 90, 175);
+    border-color:  rgb(15, 90, 175); }
+  .btn-especial:focus, .btn-especial.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem  rgb(15, 90, 175);
+            box-shadow: 0 0 0 0.2rem rgb(15, 90, 175); }
+  .btn-especial.disabled, .btn-especial:disabled {
+    color: #fff;
+    background-color: rgb(15, 90, 175);
+    border-color:  rgb(15, 90, 175); }
+  .btn-especial:not(:disabled):not(.disabled):active, .btn-especial:not(:disabled):not(.disabled).active,
+  .show > .btn-especial.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(15, 90, 175);
+    border-color: rgb(15, 90, 175); }
+    .btn-especial:not(:disabled):not(.disabled):active:focus, .btn-especial:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-especial.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem  rgb(15, 90, 175);
+              box-shadow: 0 0 0 0.2rem rgb(15, 90, 175); 
+}
+
+
+
+.btn-outline-especial {
+    color: rgb(15, 90, 175);
+    border-color: rgb(15, 90, 175); }
+    .btn-outline-especial:hover {
+        color: #fff;
+        background-color: rgb(15, 90, 175);
+        border-color: rgb(15, 90, 175); }
+        .btn-outline-especial:focus, .btn-outline-especial.focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgb(15, 90, 175);
+            box-shadow: 0 0 0 0.2rem rgb(15, 90, 175); }
+            .btn-outline-especial.disabled, .btn-outline-especial:disabled {
+              color: rgb(15, 90, 175);
+              background-color: transparent; }
+              .btn-outline-especial:not(:disabled):not(.disabled):active, .btn-outline-especial:not(:disabled):not(.disabled).active,
+              .show > .btn-outline-especial.dropdown-toggle {
+                color: #fff;
+                background-color: rgb(15, 90, 175);
+                border-color: rgb(15, 90, 175); }
+                .btn-outline-especial:not(:disabled):not(.disabled):active:focus, .btn-outline-especial:not(:disabled):not(.disabled).active:focus,
+                .show > .btn-outline-especial.dropdown-toggle:focus {
+                  -webkit-box-shadow: 0 0 0 0.2rem rgb(15, 90, 175);
+                  box-shadow: 0 0 0 0.2rem rgb(15, 90, 175); 
+}
+
+
+
+
+/*********************************************/
   
