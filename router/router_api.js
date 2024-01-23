@@ -12,7 +12,8 @@ router.post('/select_locations', async function(req,res){
 
         qry = `
         SELECT IDLOCATION,TIPO,CODIGO,NOMBRE,DIRECCION,MUNICIPIO,
-                DEPARTAMENTO,DESCRIPCION,LATITUD,LONGITUD,ACTIVO 
+                DEPARTAMENTO,DESCRIPCION,LATITUD,LONGITUD,ACTIVO,
+                URL_VIDEO 
         FROM LOCATIONS
         WHERE ACTIVO='SI'
         `

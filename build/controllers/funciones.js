@@ -139,20 +139,23 @@ let F = {
    
         document.body.innerHTML = contenidoOriginal;
     },
-    animateCSS: (element, animation, prefix = 'animate__') =>
+    animateCSS: (element, animation) =>
+        
         // We create a Promise and return it
         new Promise((resolve, reject) => {
-        const animationName = `${prefix}${animation}`;
-        const node = document.getElementById(element);
+            let prefix = 'animate__';
+            animation = animation.replace('animate__','');
+            const animationName = `${prefix}${animation}`;
+            const node = document.getElementById(element);
 
-        node.classList.add(`${prefix}animated`, animationName);
+            node.classList.add(`${prefix}animated`, animationName);
 
-        // When the animation ends, we clean the classes and resolve the Promise
-        function handleAnimationEnd(event) {
-            event.stopPropagation();
-            node.classList.remove(`${prefix}animated`, animationName);
-            resolve('Animation ended');
-        }
+          // When the animation ends, we clean the classes and resolve the Promise
+          function handleAnimationEnd(event) {
+              event.stopPropagation();
+              node.classList.remove(`${prefix}animated`, animationName);
+              resolve('Animation ended');
+          }
 
         node.addEventListener('animationend', handleAnimationEnd, {once: true});
     }),

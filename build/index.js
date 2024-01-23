@@ -82,3 +82,9 @@ function get_tab(nombre){
     
        
 }
+
+
+F.animateCSS('btnContactoW','bounceInUp')
+F.animateCSS('btnContactoT','animate__fadeInUp')
+
+

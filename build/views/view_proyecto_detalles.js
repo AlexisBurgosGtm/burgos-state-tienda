@@ -5,7 +5,7 @@ function get_detalles_proyecto(data){
     get_tab('tres');
 
     
-    root_datos_proyecto.innerHTML = card_proyecto(`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`);
+    root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.URL_VIDEO}`);
 
     document.getElementById('btnAtrasUno').style="visibility:hidden";
     document.getElementById('btnAtrasDos').style="visibility:visible";
@@ -14,11 +14,11 @@ function get_detalles_proyecto(data){
     location.hash = '';
 }
 
-function get_detalles_proyecto_card(nombre,direccion,municipio,latitud,longitud){
+function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,longitud,video){
 
     get_tab('tres');
 
-    let card = card_proyecto(nombre,direccion,municipio,latitud,longitud)
+    let card = card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video)
     root_datos_proyecto.innerHTML = card;
 
     document.getElementById('btnAtrasUno').style="visibility:visible";
@@ -29,7 +29,7 @@ function get_detalles_proyecto_card(nombre,direccion,municipio,latitud,longitud)
 }
 
 
-function card_proyecto(nombre,direccion,municipio,latitud,longitud){
+function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video){
 
     let card = '';
     card = `
@@ -51,7 +51,7 @@ function card_proyecto(nombre,direccion,municipio,latitud,longitud){
                             </button>
                         </div>
                         <div class="col-4">
-                            <a class="btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
+                            <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
                                 <i class="lni lni-whatsapp"></i> Más información
                             </a>
                         </div>
@@ -66,22 +66,22 @@ function card_proyecto(nombre,direccion,municipio,latitud,longitud){
                 
                 <div class="card-body">
                     <div class="row p-2">
-                        <div class="col-12" id="cp_intro">
-                            <img class="card-rounded shadow" src="./img/proyectos/001.png" onclick="F.expandir('cp_intro')">
+                        <div class="col-12" id="cp_intro" >
+                            <img width="100%" height="100%" class="card-rounded shadow" src="./img/proyectos/${codigo}/portada.png" onclick="F.expandir('cp_intro')">
                         </div>
                     </div>
 
                     <div class="row p-2">
                         <div class="col-6" id="cp_1">
-                            <img class="card-rounded shadow" src="./img/proyectos/001.png" onclick="F.expandir('cp_1')">
+                            <img class="card-rounded shadow" src="./img/proyectos/${codigo}/1.png" onclick="F.expandir('cp_1')">
                         </div>
                         <div class="col-6" id="cp_2">
-                            <img class="card-rounded shadow" src="./img/proyectos/001.png" onclick="F.expandir('cp_2')">
+                            <img class="card-rounded shadow" src="./img/proyectos/${codigo}/2.png" onclick="F.expandir('cp_2')">
                         </div>
                     </div>
 
                     <div class="row">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sK9PKwGqp5A?si=0hvdoXLqV160mdcK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     
                 </div>

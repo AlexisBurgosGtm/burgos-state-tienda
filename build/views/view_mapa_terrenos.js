@@ -124,7 +124,7 @@ function cargar_proyectos(){
                     <div class="card-body d-flex align-items-center">
                       <div class="product-thumbnail-side">
                           <a class="product-thumbnail d-block" href="#">
-                            <img src="img/proyectos/001.png" alt="">
+                            <img src="img/proyectos/${r.CODIGO}.png" alt="">
                           </a>
                       </div>
                       <div class="product-description">
@@ -141,7 +141,7 @@ function cargar_proyectos(){
                                 <i class="lni lni-star-filled"></i>
                             </div>
                             <!-- Buy Now Button -->
-                            <button onclick="get_detalles_proyecto_card('${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}')" class="btn btn-danger btn-sm">
+                            <button onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.URL_VIDEO}')" class="btn btn-danger btn-sm">
                                 <i class="me-1 lni lni-cart"></i> Ver proyecto
                             </button>
                       </div>
