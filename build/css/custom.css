@@ -76,7 +76,13 @@ section:hover {
     border-color: rgb(96, 236, 255);
 }
 
+.btn-hover {
+    
+}
 
+btn-hover:hover{
+    border-color: rgb(236, 19, 37);
+}
 
 .card-rounded {
     border-top-right-radius: 15px;

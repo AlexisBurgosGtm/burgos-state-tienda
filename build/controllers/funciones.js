@@ -221,6 +221,9 @@ let F = {
     gotoGoogleMaps:(lat,long)=>{
         window.open(`https://www.google.com/maps?q=${lat},${long}`);
     },
+    gotoWaze:(lat,long)=>{
+        window.open(`https://www.waze.com/ul?ll=${lat}%2C${long}&navigate=yes&zoom=17`)
+    },
     instalationHandlers: (idBtnInstall)=>{
         //INSTALACION APP
         let btnInstalarApp = document.getElementById(idBtnInstall);
