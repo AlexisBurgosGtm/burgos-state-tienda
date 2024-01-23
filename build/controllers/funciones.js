@@ -1,4 +1,33 @@
 let F = {
+    phone_call: (telefono)=>{
+      
+        let llamar = telefono.replace(" ","");
+        llamar = llamar.replace("-","");
+        llamar = llamar.replace("/","");
+        llamar = llamar.replace("*","");
+        llamar = llamar.replace("$","");
+        llamar = llamar.replace("&","");
+        llamar = llamar.replace("'","");
+        llamar = llamar.replace('"',"");
+  
+        window.location.href = 'tel:' + llamar;
+        
+    },
+    shareApp:async()=>{
+        const shareData = {
+          title: 'BURGOS STATE',
+          text: `Asesores en Bienes Inmuebles`,
+          url: window.location.origin
+        }
+
+        try {
+            await navigator.share(shareData)
+            //resultPara.textContent = 'MDN shared successfully'
+        } catch(err) {
+            //resultPara.textContent = 'Error: ' + err
+            console.log('Error al compartir: ' + err);
+        }
+    },
     ajustarMapa:()=>{
 
         //RE-AJUSTA EL MAPA A LA PANTALLA

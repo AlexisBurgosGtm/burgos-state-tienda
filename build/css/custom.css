@@ -10,15 +10,29 @@
     position: fixed;
     z-index: 1088;
     left: 5px;
-    bottom: 40px;
+    bottom: 60px;
   }
   
 /* BOTON FLOTANTE ESQUINA DERECHA */
 .btn-right{
   position: fixed;
   z-index: 888;
-  right: 21px;
-  bottom: 50px;
+  right: 15px;
+  bottom: 60px;
+}
+
+.btn-whatsapp{
+    position: fixed;
+    z-index: 888;
+    right: 15px;
+    top: 50px;
+}
+
+.btn-phone{
+    position: fixed;
+    z-index: 888;
+    right: 15px;
+    top: 80px;
 }
 
 .btn-circle {
@@ -31,6 +45,15 @@
     line-height: 1.42857;
 }
 
+.btn-circle2 {
+    width: 55px;
+    height: 55px;
+    padding: 6px 0px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.42857;
+}
 
 
 .hand {

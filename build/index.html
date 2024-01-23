@@ -157,6 +157,14 @@
                 
             </div>
             <div class="tab-pane fade" id="tres" role="tabpanel" aria-labelledby="home-tab">
+                <div class="col-12 p-2" id="root_datos_proyecto">
+
+                </div>
+                <button  class="btn btn-secondary btn-circle2 btn-left btn-xl hand shadow" onclick="get_tab('dos')">
+                    <i class="lni lni-arrow-left"></i>
+                </button>
+            </div>
+            <div class="tab-pane fade" id="cuatro" role="tabpanel" aria-labelledby="home-tab">
                 
             </div>    
         </div>
@@ -167,6 +175,14 @@
    
 
     </div>
+
+    <a class="btn btn-whatsapp btn-circle btn-xl btn-success hand shadow"  href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+las+propiedades%21%21&type=phone_number&app_absent=0" target="_blank">
+      <i class="lni lni-whatsapp"></i>
+    </a>
+
+    <a class="btn btn-phone btn-circle btn-xl btn-primary hand shadow" href="#" onclick="F.phone_call('57255092')">
+      <i class="lni lni-phone"></i>
+    </a>
 
     <!-- Internet Connection Status-->
     <div class="internet-connection-status" id="internetStatus"></div>
@@ -179,18 +195,19 @@
             <li class="active"><a class="text-white" href="#" onclick="get_tab('uno')">
               <i class="lni lni-home"></i>Inicio</a>
             </li>
-            <li><a class="text-white" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+las+propiedades%21%21&type=phone_number&app_absent=0">
+            <li><a class="text-white" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+las+propiedades%21%21&type=phone_number&app_absent=0" target="_blank">
               <i class="lni lni-phone-set"></i>Contáctanos</a>
             </li>
             <li><a class="text-white" href="#" onclick="cargar_lotes()">
-              <i class="lni lni-map-marker"></i>Lotes/Terrenos</a>
-            </li>
-            <li class="oculto"><a class="text-white" href="#">
-              <i class="lni lni-map"></i>Propiedades</a>
+              <i class="lni lni-map-marker"></i>Lotes</a>
             </li>
             <li><a class="text-white" href="https://www.facebook.com/profile.php?id=61555641001343" target="_blank">
               <i class="lni lni-facebook"></i>Facebook</a>
             </li>
+            <li class="oculto"><a class="text-white" href="#">
+              <i class="lni lni-map"></i>Propiedades</a>
+            </li>
+            
           </ul>
         </div>
       </div>
@@ -210,12 +227,14 @@
     <script src="js/no-internet.js"></script>
     
     <script src="./controllers/funciones.js"></script>
-    <script src="./controllers/Navegar.js"></script>
+    
     <script src="./libs/axios.min.js"></script>
     <script src="./libs/parallax.min.js"></script>
     <script src="./libs/leaflet/leaflet.js"></script>
    
     <script src="./views/view_mapa_terrenos.js"></script>
+    <script src="./views/view_proyecto_detalles.js"></script>
+
 
     <script src="index.js"></script>
 

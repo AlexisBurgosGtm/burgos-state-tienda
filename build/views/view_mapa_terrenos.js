@@ -82,6 +82,7 @@ function cargar_mapa(data){
                     .bindPopup(`${r.NOMBRE}`, {closeOnClick: false, autoClose: false})
                     .on("click",function(e) {
                           this.openPopup();
+                          get_detalles_proyecto(r)
                           var position = e.target._latlng;
                     });
             })
