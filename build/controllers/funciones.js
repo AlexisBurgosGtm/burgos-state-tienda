@@ -121,6 +121,33 @@ let F = {
                   
         return map;
     },
+    detectarPc:()=>{
+        let navegador = navigator.userAgent;
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+            //console.log("Estás usando un dispositivo móvil!!");
+          return 'tel';
+        } else {
+            //console.log("No estás usando un móvil");
+          return 'pc';
+        }
+    },
+    setMoneda: function(num,signo) {
+        num = num.toString().replace(/\$|\,/g, '');
+        if (isNaN(num)) num = "0";
+        let sign = (num == (num = Math.abs(num)));
+        num = Math.floor(num * 100 + 0.50000000001);
+        let cents = num % 100;
+        num = Math.floor(num / 100).toString();
+        if (cents < 10) cents = "0" + cents;
+        for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++)
+            num = num.substring(0, num.length - (4 * i + 3)) + ',' + num.substring(num.length - (4 * i + 3));
+        let resultado = ((((sign) ? '' : '-') + signo + ' ' + num + ((cents == "00") ? '' : '.' + cents)).toString());
+        
+        if(resultado.includes('.')){}else{resultado = resultado + ".00"}
+        
+        return resultado.replace('-','');
+
+    },
     setMoneda2:(number)=>{
         let valor = new Intl.NumberFormat('en-GB', { style:'currency', currency:'GTQ' }).format(number);
         return valor;

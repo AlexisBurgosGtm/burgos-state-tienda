@@ -5,7 +5,7 @@ function get_detalles_proyecto(data){
     get_tab('tres');
 
     
-    root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.URL_VIDEO}`);
+    root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.AREA}`,`${data.AREA}`,`${data.URL_VIDEO}`);
 
     document.getElementById('btnAtrasUno').style="visibility:hidden";
     document.getElementById('btnAtrasDos').style="visibility:visible";
@@ -14,11 +14,11 @@ function get_detalles_proyecto(data){
     location.hash = '';
 }
 
-function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,longitud,video){
+function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,video){
 
     get_tab('tres');
 
-    let card = card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video)
+    let card = card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,video)
     root_datos_proyecto.innerHTML = card;
 
     document.getElementById('btnAtrasUno').style="visibility:visible";
@@ -29,7 +29,7 @@ function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,lo
 }
 
 
-function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video){
+function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,video){
 
     let card = '';
     card = `
@@ -40,17 +40,17 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video)
                     <small class="text-secondary">${direccion}, ${municipio}</small>
                     <hr class="solid">
                     <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <div class="col-4">
                             <button class="btn btn-success hand col-12" onclick="F.gotoGoogleMaps('${latitud}','${longitud}')">
                                 <i class="lni lni-map-marker"></i> GMaps
                             </button>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <div class="col-4">
                             <button class="btn btn-info hand col-12" onclick="F.gotoWaze('${latitud}','${longitud}')">
                                 <i class="lni lni-map-marker"></i> WAZE
                             </button>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <div class="col-4">
                             <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
                                 <i class="lni lni-whatsapp"></i> info
                             </a>

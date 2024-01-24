@@ -128,21 +128,19 @@ function cargar_proyectos(){
                           </a>
                       </div>
                       <div class="product-description">
-                            <a class="product-title d-block text-danger" href="#">${r.NOMBRE}</a>
-                            <small class="text-secondary"><i class="btn-circle btn-sm btn-info fa fa-swimmer"></i> Área recreativa</small><br>
-                            <small class="text-secondary"><i class="btn-circle btn-sm btn-info fa fa-tint"></i> Agua potable</small><br>
-                            <small class="text-secondary"><i class="btn-circle btn-sm btn-info fa fa-hands-wash"></i> Drenajes</small><br>
-                            <div class="product-rating">
-                                
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                            </div>
-                            <!-- Buy Now Button -->
-                            <button onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.URL_VIDEO}')" class="btn btn-danger btn-sm">
+                            <a class="product-title d-block text-danger">${r.NOMBRE}</a>
+                            <small class="text-secondary">* Agua potable / Drenajes</small><br>
+                            <small class="text-secondary">* Calles pavimentadas</small><br>
+                            <small class="text-secondary">* ${r.AREA}</small><br>
+                            <small class="text-danger">* Precios desde ${F.setMoneda(Number(r.DESDE),'Q')}</small><br>
+                          
+                            <hr class="solid">
+
+                            <button onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.URL_VIDEO}')" class="btn btn-danger btn-sm">
                                 <i class="me-1 lni lni-cart"></i> Ver proyecto
                             </button>
+                           
+
                       </div>
                   </div>
                 </section>
