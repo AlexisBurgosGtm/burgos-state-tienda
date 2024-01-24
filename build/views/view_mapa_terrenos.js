@@ -124,17 +124,16 @@ function cargar_proyectos(){
                     <div class="card-body d-flex align-items-center">
                       <div class="product-thumbnail-side">
                           <a class="product-thumbnail d-block" href="#">
-                            <img src="img/proyectos/${r.CODIGO}.png" alt="">
+                            <img src="http://alexissoporte-001-site4.etempurl.com/logos?codigo=${r.CODIGO}" alt="">
                           </a>
                       </div>
                       <div class="product-description">
                             <a class="product-title d-block text-danger" href="#">${r.NOMBRE}</a>
-                            <small class="text-secondary">Garita</small><br>
-                            <small class="text-secondary">Casa Club / Piscina</small><br>
-                            <small class="text-secondary">Agua potable</small><br>
-                            <small class="text-secondary">Drenajes</small><br>
+                            <small class="text-secondary"><i class="btn-circle btn-sm btn-info fa fa-swimmer"></i> Área recreativa</small><br>
+                            <small class="text-secondary"><i class="btn-circle btn-sm btn-info fa fa-tint"></i> Agua potable</small><br>
+                            <small class="text-secondary"><i class="btn-circle btn-sm btn-info fa fa-hands-wash"></i> Drenajes</small><br>
                             <div class="product-rating">
-                                <i class="lni lni-star-filled"></i>
+                                
                                 <i class="lni lni-star-filled"></i>
                                 <i class="lni lni-star-filled"></i>
                                 <i class="lni lni-star-filled"></i>

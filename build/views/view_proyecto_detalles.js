@@ -33,26 +33,26 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video)
 
     let card = '';
     card = `
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card card-rounded border-especial shadow p-4" id="card_detalle">
                 <div class="card-body bg-white text-center">
                     <h4 class="text-danger">${nombre}</h4>
                     <small class="text-secondary">${direccion}, ${municipio}</small>
                     <hr class="solid">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <button class="btn btn-success hand col-12" onclick="F.gotoGoogleMaps('${latitud}','${longitud}')">
-                                <i class="lni lni-map-marker"></i> Google Maps
+                                <i class="lni lni-map-marker"></i> GMaps
                             </button>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <button class="btn btn-info hand col-12" onclick="F.gotoWaze('${latitud}','${longitud}')">
                                 <i class="lni lni-map-marker"></i> WAZE
                             </button>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                             <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
-                                <i class="lni lni-whatsapp"></i> Más información
+                                <i class="lni lni-whatsapp"></i> info
                             </a>
                         </div>
                     </div>
@@ -61,22 +61,23 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,video)
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div class="card card-rounded border-especial shadow p-4" id="card_detalle2">
                 
                 <div class="card-body">
                     <div class="row p-2">
                         <div class="col-12" id="cp_intro" >
-                            <img width="100%" height="100%" class="card-rounded shadow" src="./img/proyectos/${codigo}/portada.png" onclick="F.expandir('cp_intro')">
+                            <img width="100%" height="100%" class="card-rounded shadow" 
+                            src="http://alexissoporte-001-site4.etempurl.com/proyectos?codigo=${codigo}&imagen=portada" onclick="F.expandir('cp_intro')">
                         </div>
                     </div>
 
                     <div class="row p-2">
                         <div class="col-6" id="cp_1">
-                            <img class="card-rounded shadow" src="./img/proyectos/${codigo}/1.png" onclick="F.expandir('cp_1')">
+                            <img class="card-rounded shadow" src="http://alexissoporte-001-site4.etempurl.com/proyectos?codigo=${codigo}&imagen=1" onclick="F.expandir('cp_1')">
                         </div>
                         <div class="col-6" id="cp_2">
-                            <img class="card-rounded shadow" src="./img/proyectos/${codigo}/2.png" onclick="F.expandir('cp_2')">
+                            <img class="card-rounded shadow" src="http://alexissoporte-001-site4.etempurl.com/proyectos?codigo=${codigo}&imagen=2" onclick="F.expandir('cp_2')">
                         </div>
                     </div>
 
