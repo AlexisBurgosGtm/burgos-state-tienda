@@ -75,7 +75,7 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                     <br><br>
                     <div class="row">
                         <iframe width="560" height="315" 
-                        src="${foto_video}" 
+                        src="${F.limpiarUrlYoutube(foto_video)}" 
                         title="YouTube video player" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; 
                         encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -169,7 +169,7 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
 
                     <div class="row">
                         <iframe width="560" height="315" 
-                        src="${foto_video}" 
+                        src="${F.limpiarUrlYoutube(foto_video)}" 
                         title="YouTube video player" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; 
                         encrypted-media; gyroscope; picture-in-picture; web-share" 
