@@ -13,7 +13,7 @@ router.post('/select_locations', async function(req,res){
         qry = `
         SELECT IDLOCATION,TIPO,CODIGO,NOMBRE,DIRECCION,MUNICIPIO,
                 DEPARTAMENTO,DESCRIPCION,LATITUD,LONGITUD,ACTIVO,
-                DESDE,AREA,URL_VIDEO 
+                DESDE,AREA,FOTO_LOGO,FOTO_PORTADA,FOTO_UNO,FOTO_DOS,FOTO_VIDEO 
         FROM LOCATIONS
         WHERE ACTIVO='SI'
         `

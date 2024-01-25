@@ -136,7 +136,7 @@ function cargar_proyectos(){
                           
                             <hr class="solid">
 
-                            <button onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.URL_VIDEO}')" class="btn btn-danger btn-sm">
+                            <button onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" class="btn btn-danger btn-sm">
                                 <i class="me-1 lni lni-cart"></i> Ver proyecto
                             </button>
                            

@@ -5,7 +5,7 @@ function get_detalles_proyecto(data){
     get_tab('tres');
 
     
-    root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.AREA}`,`${data.AREA}`,`${data.URL_VIDEO}`);
+    root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.AREA}`,`${data.AREA}`,`${data.FOTO_LOGO}`,`${data.FOTO_PORTADA}`,`${data.FOTO_UNO}`,`${data.FOTO_DOS}`,`${data.FOTO_VIDEO}`);
 
     document.getElementById('btnAtrasUno').style="visibility:hidden";
     document.getElementById('btnAtrasDos').style="visibility:visible";
@@ -14,11 +14,11 @@ function get_detalles_proyecto(data){
     location.hash = '';
 }
 
-function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,video){
+function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,foto_logo,foto_portada,foto_uno,foto_dos,foto_video){
 
     get_tab('tres');
 
-    let card = card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,video)
+    let card = card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,foto_logo,foto_portada,foto_uno,foto_dos,foto_video)
     root_datos_proyecto.innerHTML = card;
 
     document.getElementById('btnAtrasUno').style="visibility:visible";
@@ -29,13 +29,14 @@ function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,lo
 }
 
 
-function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,video){
+function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,foto_logo,foto_portada,foto_uno,foto_dos,foto_video){
 
     let card = '';
     card = `
         <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="card card-rounded border-especial shadow p-4" id="card_detalle">
                 <div class="card-body bg-white text-center">
+                    <img src="${foto_logo}" width="60px" height="45px">
                     <h4 class="text-danger">${nombre}</h4>
                     <small class="text-secondary">${direccion}, ${municipio}</small>
                     <hr class="solid">
@@ -68,21 +69,26 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                     <div class="row p-2">
                         <div class="col-12" id="cp_intro" >
                             <img width="100%" height="100%" class="card-rounded shadow" 
-                            src="http://alexissoporte-001-site4.etempurl.com/proyectos?codigo=${codigo}&imagen=portada" onclick="F.expandir('cp_intro')">
+                            src="${foto_portada}" onclick="F.expandir('cp_intro')">
                         </div>
                     </div>
 
                     <div class="row p-2">
                         <div class="col-6" id="cp_1">
-                            <img class="card-rounded shadow" src="http://alexissoporte-001-site4.etempurl.com/proyectos?codigo=${codigo}&imagen=1" onclick="F.expandir('cp_1')">
+                            <img class="card-rounded shadow" src="${foto_uno}" onclick="F.expandir('cp_1')">
                         </div>
                         <div class="col-6" id="cp_2">
-                            <img class="card-rounded shadow" src="http://alexissoporte-001-site4.etempurl.com/proyectos?codigo=${codigo}&imagen=2" onclick="F.expandir('cp_2')">
+                            <img class="card-rounded shadow" src="${foto_dos}" onclick="F.expandir('cp_2')">
                         </div>
                     </div>
 
                     <div class="row">
-                        <iframe width="560" height="315" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" 
+                        src="${foto_video}" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
                     </div>
                     
                 </div>
