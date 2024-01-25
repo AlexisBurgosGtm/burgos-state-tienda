@@ -120,11 +120,12 @@ function cargar_proyectos(){
             
             cards += `
             <div class="col-12 col-md-6">
-                <section class="card card-rounded border-especial horizontal-product-card shadow-especial">
+                <section onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" 
+                class="card card-rounded border-especial horizontal-product-card shadow-especial hand">
                     <div class="card-body d-flex align-items-center">
                       <div class="product-thumbnail-side">
                           <a class="product-thumbnail d-block" href="#">
-                            <img src="http://alexissoporte-001-site4.etempurl.com/logos?codigo=${r.CODIGO}" alt="">
+                            <img src="${r.FOTO_LOGO}" alt="">
                           </a>
                       </div>
                       <div class="product-description">
@@ -136,7 +137,7 @@ function cargar_proyectos(){
                           
                             <hr class="solid">
 
-                            <button onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" class="btn btn-danger btn-sm">
+                            <button class="btn btn-danger btn-sm col-12">
                                 <i class="me-1 lni lni-cart"></i> Ver proyecto
                             </button>
                            
