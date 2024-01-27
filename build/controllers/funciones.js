@@ -123,6 +123,8 @@ let F = {
     },
     limpiarUrlYoutube:(url)=>{
       let urlFinal = url.replace('watch?v=','embed/');
+      urlFinal = urlFinal.replace('shorts/','embed/');
+      
       return urlFinal;
     },
     detectarPc:()=>{
