@@ -16,6 +16,7 @@ let execute = {
 	Query : (res,sqlqry)=>{	
 		
 		//console.log('ejecutando consulta... ' + sqlqry);		
+		sqlqry = sqlqry.replace('DELETE','').replace('TRUNCATE','').replace('DROP','');
 
 		try {
 		  const pool1 = new sql.ConnectionPool(config, err => {

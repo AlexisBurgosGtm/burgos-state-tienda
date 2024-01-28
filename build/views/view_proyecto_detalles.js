@@ -67,7 +67,7 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                             </button>
                         </div>
                         <div class="col-4">
-                            <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
+                            <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
                                 <i class="lni lni-whatsapp"></i> info
                             </a>
                         </div>
@@ -137,7 +137,7 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                             </button>
                         </div>
                         <div class="col-4">
-                            <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50257255092&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
+                            <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
                                 <i class="lni lni-whatsapp"></i> info
                             </a>
                         </div>
