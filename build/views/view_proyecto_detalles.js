@@ -229,19 +229,9 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                     
                     <hr class="solid">
                     <div class="row">
-                        <div class="col-4">
-                            <button class="btn btn-success hand col-12" onclick="F.gotoGoogleMaps('${latitud}','${longitud}')">
-                                <i class="lni lni-map-marker"></i> GMaps
-                            </button>
-                        </div>
-                        <div class="col-4">
-                            <button class="btn btn-info hand col-12" onclick="F.gotoWaze('${latitud}','${longitud}')">
-                                <i class="lni lni-map-marker"></i> WAZE
-                            </button>
-                        </div>
-                        <div class="col-4">
+                        <div class="col-12">
                             <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
-                                <i class="lni lni-whatsapp"></i> info
+                                <i class="lni lni-whatsapp"></i> Escríbenos para una visita guiada!!
                             </a>
                         </div>
                     </div>
@@ -303,19 +293,9 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                     <small class="text-info">Precios desde ${F.setMoneda(desde,'Q')}</small>
                     <hr class="solid">
                     <div class="row">
-                        <div class="col-4">
-                            <button class="btn btn-success hand col-12" onclick="F.gotoGoogleMaps('${latitud}','${longitud}')">
-                                <i class="lni lni-map-marker"></i> GMaps
-                            </button>
-                        </div>
-                        <div class="col-4">
-                            <button class="btn btn-info hand col-12" onclick="F.gotoWaze('${latitud}','${longitud}')">
-                                <i class="lni lni-map-marker"></i> WAZE
-                            </button>
-                        </div>
-                        <div class="col-4">
+                        <div class="col-12">
                             <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
-                                <i class="lni lni-whatsapp"></i> info
+                                <i class="lni lni-whatsapp"></i> Escríbenos para una visita guiada!!
                             </a>
                         </div>
                     </div>
