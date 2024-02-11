@@ -84,7 +84,13 @@ function cargar_mapa(data){
                           this.openPopup();
                           get_detalles_proyecto(r)
                           var position = e.target._latlng;
-                    });
+                    })
+                    .on("mouseover",function(e) {
+                        this.openPopup();
+                    })
+                    .on("mouseout",function(e) {
+                        this.closePopup();
+                    })
             })
               
           
