@@ -2,6 +2,21 @@ const execute = require('./connection');
 const express = require('express');
 const router = express.Router();
 
+router.get('/visita', async function(req,res){
+
+    const {ip,fecha,hora} = req.query;
+
+    let qry = '';
+
+        qry = `INSERT INTO VISITORS
+                (FECHA,IP,HORA) 
+            VALUES 
+                ('${fecha}','${ip}','${hora}');`
+            
+     execute.Query(res,qry);
+    
+});
+
 
 
 router.post('/select_locations', async function(req,res){

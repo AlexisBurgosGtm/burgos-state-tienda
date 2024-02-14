@@ -1,4 +1,41 @@
 let F = {
+    getIp:()=>{
+        return new Promise((resolve,reject)=>{
+            try {
+                axios.get('https://api.ipify.org?format=json')
+                .then((response)=>{
+                    let ip = response.data.ip
+                    console.log(ip);
+                    resolve(ip)
+                })
+                .catch((error)=>{
+                    reject();
+                })
+                
+              } catch (error) {
+                console.error(error);
+                reject();
+              }
+        })
+    },
+    registrar_visita:(ip)=>{
+        return new Promise((resolve,reject)=>{
+            try {
+                axios.get(`/api/visita?ip=${ip.toString()}&fecha=${F.getFecha()}&hora=${F.getHora()}`)
+                .then((response)=>{
+                    resolve()
+                })
+                .catch((error)=>{
+                    reject();
+                })
+                
+              } catch (error) {
+                console.error(error);
+                reject();
+              }
+        })
+    },
+    
     //fullscreen scroll
     expandir:(idcontainer)=>{
   
