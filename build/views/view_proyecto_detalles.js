@@ -13,9 +13,9 @@ function get_detalles_proyecto(data){
     location.hash = "#card_detalle";
     location.hash = '';
     
-    $('.carousel').carousel({
-        interval: 1000
-      })
+ 
+    F.initHeroSlides();
+    
 
 };
 
@@ -33,14 +33,14 @@ function get_detalles_proyecto_card(codigo,nombre,direccion,municipio,latitud,lo
     location.hash = '';
 
     
-    $('.carousel').carousel({
-        interval: 1000
-      })
+    
+    F.initHeroSlides();
+
 };
 
 
 
-function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,foto_logo,foto_portada,foto_uno,foto_dos,foto_video){
+function BACKUP_card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,foto_logo,foto_portada,foto_uno,foto_dos,foto_video){
 
     let card = '';
 
@@ -195,4 +195,84 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
 
 
 };
+
+function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,area,foto_logo,foto_portada,foto_uno,foto_dos,foto_video){
+
+    let card = '';
+
+    let tipodispositivo = F.detectarPc();
+
+
+        card = `
+        <div class="product-slide-wrapper">
+            <div class="product-slides owl-carousel">
+                <div class="single-product-slide" style="background-image: url('${foto_portada}')"></div>
+                <div class="single-product-slide" style="background-image: url('${foto_uno}')"></div>
+                <div class="single-product-slide" style="background-image: url('${foto_dos}')"></div>
+            </div>
+        </div>
+        <div class="product-description pb-3">
+            <!-- Product Title & Meta Data-->
+            <div class="product-title-meta-data bg-white mb-3 py-3">
+                <div class="container d-flex justify-content-between">
+                    <div class="p-title-price">
+                        <h6 class="text-danger mb-1">${nombre}</h6>
+                        <p class="sale-price mb-0 text-info">Desde: ${F.setMoneda(desde,'Q')}</p>
+                    </div>
+                </div>
+                 
+        
+                <!-- Product Specification-->
+                <div class="p-specification bg-white mb-3 py-3">
+                    <div class="container">
+                        <h6>Especificaciones</h6>
+                        <p>
+                          Oportunidad de inversión !!... llámanos o escríbenos por whatsapp para que podamos llevarte sin compromiso de compra, a conocer esta propiedad.
+                        </p>
+                        <ul class="mb-3 ps-3">
+                            <li><i class="lni lni-checkmark-circle"> </i> Escritura registrada</li>
+                            <li><i class="lni lni-checkmark-circle"> </i> Municipio: ${municipio}</li>
+                            <li> <i class="lni lni-checkmark-circle"> </i> ${area}</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Product Video 
+                <div class="bg-img" style="background-image: url('${foto_portada}')">
+                    <div class="container">
+                        <div class="video-cta-content d-flex align-items-center justify-content-center">
+                            <div class="video-text text-center">
+                                <h4 class="mb-4">Video promocional</h4>
+                                <a class="btn btn-primary rounded-circle" id="videoButton" href="${foto_video}" target="_blank">
+                                    <i class="lni lni-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <div class="text-center">
+                                <iframe width="560" height="315" 
+                                src="${F.limpiarUrlYoutube(foto_video)}" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                </div>
+                
+                
+
+
+            </div>
+        </div>
+            `;
+    
+    return card;
+
+
+
+};
+
+
 

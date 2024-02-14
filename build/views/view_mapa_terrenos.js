@@ -175,7 +175,7 @@ function cargar_proyectos(){
             cards += `
             <div class="col-12 col-md-6">
                 <section onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" 
-                class="card col-12 card-rounded border-especial horizontal-product-card shadow-especial hand">
+                class="card col-12 card-rounded border-primary horizontal-product-card hand">
                     
                     <div class="card-body">
                         <div class="product-thumbnail-side col-12">
@@ -189,7 +189,7 @@ function cargar_proyectos(){
                         <div class="row">
                             <small class="text-secondary">* Agua potable / Drenajes</small><br>
                             <small class="text-secondary">* Calles pavimentadas</small><br>
-                            <small class="text-secondary">* ${r.AREA}</small><br>
+                            <small class="text-secondary">* ${r.MUNICIPIO}</small><br>
                             <small class="text-danger">* Precios desde ${F.setMoneda(Number(r.DESDE),'Q')}</small><br>    
                         </div>
                     </div>
