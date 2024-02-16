@@ -87,4 +87,34 @@ function get_tab(nombre){
 F.animateCSS('btnContactoW','bounceInUp')
 F.animateCSS('btnContactoT','animate__fadeInUp')
 
+function verificar_proyecto_compartido(){
 
+    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    if(hash){
+        get_data_location_code(hash)
+        .then((datos)=>{
+            let data = datos.recordset[0];
+
+            get_tab('tres');
+
+    
+            root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.DESDE}`,`${data.AREA}`,`${data.FOTO_LOGO}`,`${data.FOTO_PORTADA}`,`${data.FOTO_UNO}`,`${data.FOTO_DOS}`,`${data.FOTO_VIDEO}`);
+        
+            document.getElementById('btnAtrasUno').style="visibility:hidden";
+            document.getElementById('btnAtrasDos').style="visibility:visible";
+        
+            location.hash = "#card_detalle";
+            location.hash = '';
+            
+        
+            F.initHeroSlides();
+        })
+        
+
+    }else{
+        console.log('---')
+    }
+
+};
+
+verificar_proyecto_compartido();

@@ -219,6 +219,18 @@ function card_proyecto(codigo,nombre,direccion,municipio,latitud,longitud,desde,
                         <h6 class="text-danger mb-1">${nombre}</h6>
                         <p class="sale-price mb-0 text-info">Desde: ${F.setMoneda(desde,'Q')}</p>
                     </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="animate__animated animate__zoomInLeft btn btn-danger hand col-12" href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+${nombre}%21%21&type=phone_number&app_absent=0" target="_blank">
+                                <i class="lni lni-whatsapp"></i> Escríbenos para una visita guiada!!
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-primary hand shadow" onclick="F.shareProperty('${codigo}')">
+                                <i class="lni lni-checkmark-circle"></i>Compárteme a un amigo
+                            </button>
+                        </div>
+                    </div>
                 </div>
                  
         

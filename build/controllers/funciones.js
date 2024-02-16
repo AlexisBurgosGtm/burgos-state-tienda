@@ -1,4 +1,19 @@
 let F = {
+    shareProperty:async(codigo)=>{
+        const shareData = {
+            title: 'BURGOS STATE',
+            text: `Asesores en Bienes Inmuebles`,
+            url: window.location.origin + "#" + codigo.toString()
+          }
+  
+          try {
+              await navigator.share(shareData)
+              //resultPara.textContent = 'MDN shared successfully'
+          } catch(err) {
+              //resultPara.textContent = 'Error: ' + err
+              console.log('Error al compartir: ' + err);
+          }
+    },
     getIp:()=>{
         return new Promise((resolve,reject)=>{
             try {

@@ -21,6 +21,26 @@ function get_data_locations(){
     })
 };
 
+function get_data_location_code(codigo){
+    return new Promise((resolve,reject)=>{
+
+        axios.post('/api/select_location',{codigo:codigo})
+        .then((response) => {
+            
+            let data = response.data;
+            if(Number(data.rowsAffected[0])>0){
+                resolve(data);
+            }else{
+                reject();
+            };
+        }, (error) => {
+            console.log(error);
+            reject();
+        });
+
+    })
+};
+
 function showUbicacion(){
     //let lat ='0'; let longg = '0';
     return new Promise((resolve,reject)=>{
