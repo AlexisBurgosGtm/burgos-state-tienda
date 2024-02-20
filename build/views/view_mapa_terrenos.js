@@ -135,53 +135,6 @@ function cargar_lotes(){
 
 };
 
-function backup_cargar_proyectos(){
-    let container = document.getElementById('root_proyectos');
-    container.innerHTML = GlobalLoader;
-
-    get_data_locations()
-    .then((data)=>{
-        let cards = '';
-        data.recordset.map((r)=>{
-            
-            cards += `
-            <div class="col-12 col-md-6">
-                <section onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" 
-                class="card card-rounded border-especial horizontal-product-card shadow-especial hand">
-                    <div class="card-body d-flex align-items-center">
-                      <div class="product-thumbnail-side">
-                          <a class="product-thumbnail d-block" href="#">
-                            <img src="${r.FOTO_LOGO}" alt="">
-                          </a>
-                      </div>
-                      
-                      <div class="product-description">
-                            <a class="product-title d-block text-danger">${r.NOMBRE}</a>
-                            <small class="text-secondary">* Agua potable / Drenajes</small><br>
-                            <small class="text-secondary">* Calles pavimentadas</small><br>
-                            <small class="text-secondary">* ${r.AREA}</small><br>
-                            <small class="text-danger">* Precios desde ${F.setMoneda(Number(r.DESDE),'Q')}</small><br>
-                          
-                            <hr class="solid">
-
-                            <button class="btn btn-danger btn-sm col-12">
-                                <i class="me-1 lni lni-cart"></i> Ver proyecto
-                            </button>
-                           
-
-                      </div>
-                  </div>
-                </section>
-            </div>
-            `   
-        })
-        container.innerHTML = cards;
-        cargar_mapa(data);
-     })
-
-
-
-};
 
 function cargar_proyectos(){
     let container = document.getElementById('root_proyectos');
@@ -191,7 +144,7 @@ function cargar_proyectos(){
     .then((data)=>{
         let cards = '';
         data.recordset.map((r)=>{
-            
+            let strClassPago = 'text-danger';
             cards += `
             <div class="col-12 col-md-6">
                 <section onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" 
@@ -207,8 +160,8 @@ function cargar_proyectos(){
                             <b><a class="text-center text-primary negrita">${r.NOMBRE}</a></b>
                         </div>
                         <div class="row">
-                            <small class="text-secondary">* Agua potable / Drenajes</small><br>
-                            <small class="text-secondary">* Calles pavimentadas</small><br>
+                            <small class="${strClassPago} negrita">* ${r.TIPOPAGO}</small><br>
+                            <small class="text-secondary">* ${r.AREA}</small><br>
                             <small class="text-secondary">* ${r.MUNICIPIO}</small><br>
                             <small class="text-danger">* Precios desde ${F.setMoneda(Number(r.DESDE),'Q')}</small><br>    
                         </div>
