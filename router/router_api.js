@@ -48,6 +48,7 @@ router.post('/select_location', async function(req,res){
         qry = `
         SELECT TIPO,IDLOCATION AS CODIGO,NOMBRE,DIRECCION,MUNICIPIO,
                 DEPARTAMENTO,DESCRIPCION,LATITUD,LONGITUD,ACTIVO,
+                TIPOPAGO, DETALLES,
                 DESDE,AREA,FOTO_LOGO,FOTO_PORTADA,FOTO_UNO,FOTO_DOS,FOTO_TRES,FOTO_VIDEO 
         FROM LOCATIONS
         WHERE ACTIVO='SI' AND IDLOCATION=${codigo}

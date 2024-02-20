@@ -147,8 +147,8 @@ function cargar_proyectos(){
             let strClassPago = 'text-danger';
             cards += `
             <div class="col-12 col-md-6">
-                <section onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_VIDEO}')" 
-                class="card col-12 card-rounded border-primary horizontal-product-card hand">
+                <section onclick="get_detalles_proyecto_card('${r.CODIGO}','${r.NOMBRE}','${r.DIRECCION}','${r.MUNICIPIO}','${r.LATITUD}','${r.LONGITUD}','${r.DESDE}','${r.AREA}','${r.FOTO_LOGO}','${r.FOTO_PORTADA}','${r.FOTO_UNO}','${r.FOTO_DOS}','${r.FOTO_TRES}','${r.FOTO_VIDEO}','${r.TIPOPAGO}','${r.DETALLES}')" 
+                class="card col-12 card-rounded shadow-especial border-primary horizontal-product-card hand">
                     
                     <div class="card-body">
                         <div class="product-thumbnail-side col-12">
