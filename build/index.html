@@ -57,7 +57,7 @@
         <div class="logo-wrapper">
           <a href="#">
             <img src="img/icons/icon-72x72.png" width="30px" height="30px" alt="">
-            <label class="negrita text-especial">Burgos State - Asesores en Bienes Inmuebles</label>
+            <label class="negrita text-especial">Burgos State <small class="text-secondary">busca las mejores propiedades para ti</small></label>
           </a>
           
         </div>
@@ -66,7 +66,7 @@
     
 
     <!-- PWA Install Alert -->
-    <div id="btnInstall" class="hand toast pwa-install-alert shadow text-white bg-secondary" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
+    <div id="btnInstall" class="hand toast pwa-install-alert shadow text-white bg-especial" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
       <div class="toast-body">
         <div class="content d-flex align-items-center mb-2"><img src="img/icons/icon-72x72.png" alt="">
           <h6 class="mb-0 text-warning">Instálame como Aplicación!!</h6>
@@ -93,12 +93,14 @@
                           <div class="single-hero-slide" style="background-image: url('img/bg-img/1.jpg')">
                               <div class="slide-content h-100 d-flex align-items-center">
                                   <div class="slide-text">
-                                      <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" 
+                                      <h4 class="text-primary mb-0" data-animation="fadeInUp" data-delay="100ms" 
                                       data-duration="1000ms">Asesores en Bienes Raíces</h4>
-                                      <p class="text-white" data-animation="fadeInUp" data-delay="400ms" 
+                                      <p class="text-primary" data-animation="fadeInUp" data-delay="400ms" 
                                       data-duration="1000ms">Te ayudamos a conseguir el terreno ideal</p>
                                       <a class="btn btn-primary btn-sm" href="#" data-animation="fadeInUp" 
-                                      data-delay="800ms" data-duration="1000ms">Cotiza con nosotros!!</a>
+                                      data-delay="800ms" data-duration="1000ms"
+                                      href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+las+propiedades%21%21&type=phone_number&app_absent=0" 
+                                      target="_blank">Cotiza con nosotros!!</a>
                                   </div>
                               </div>
                           </div>
@@ -136,8 +138,8 @@
                   </div>
                 </div>
 
-                <div class="weekly-best-seller-area py-3">
-                  <div class="container">
+                <div class="weekly-best-seller-area py-0">
+                  <div class="">
                       
                       <!-- Discount Coupon Card
                       <div class="container">
@@ -153,12 +155,11 @@
                       -->
 
                       <br>
-                      <div class="row g-3" id="root_proyectos">
-                          <!-- Proyect Card -->
-                          
+                      <div class="col-12 mapcontainer" id="mapcontainer">
 
-                      
+
                       </div>
+                      
 
                   </div>
                 </div>
@@ -166,11 +167,15 @@
             </div>
 
             <div class="tab-pane fade" id="dos" role="tabpanel" aria-labelledby="home-tab">
-               <div class="col-12 mapcontainer" id="mapcontainer">
+                <div class="row g-3" id="root_cotizaciones">
+                    <div class="card card-rounded col-12 shadow">
+                        <div class="card-body">
+                            
+                        </div>
 
-
-               </div>
+                    </div>
                 
+                </div>
             </div>
             <div class="tab-pane fade" id="tres" role="tabpanel" aria-labelledby="home-tab">
                 
@@ -181,7 +186,7 @@
                 <button  class="btn btn-secondary btn-circle2 btn-left btn-xl hand shadow" id="btnAtrasUno" onclick="get_tab('uno')">
                     <i class="lni lni-arrow-left"></i>
                 </button>
-                <button  class="btn btn-secondary btn-circle2 btn-left btn-xl hand shadow" id="btnAtrasDos" onclick="get_tab('dos')">
+                <button  class="btn btn-secondary btn-circle2 btn-left btn-xl hand shadow" id="btnAtrasDos" onclick="get_tab('uno')">
                   <i class="lni lni-arrow-left"></i>
                 </button>
                 
@@ -217,9 +222,14 @@
             <li class="active"><a class="text-white" href="#" onclick="get_tab('uno')">
               <i class="lni lni-home"></i>Inicio</a>
             </li>
+            <!--
             <li><a class="text-white" href="#" onclick="cargar_lotes()">
               <i class="lni lni-map-marker"></i>Mapa Ubicaciones</a>
+            </li>-->
+            <li><a class="text-white" href="#" onclick="solicitar_cotizacion()">
+              <i class="lni lni-pencil"></i>Solicitar</a>
             </li>
+
             <li><a class="text-white" href="https://api.whatsapp.com/send/?phone=50239160727&text=Hola+Burgos+State+%21%21+quisiera+informaci%C3%B3n+sobre+las+propiedades%21%21&type=phone_number&app_absent=0" target="_blank">
               <i class="lni lni-phone-set"></i>Contáctanos</a>
             </li>

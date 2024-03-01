@@ -95,22 +95,31 @@ function cargar_mapa(data){
             map = Lmap(Number(lat),Number(longg));
 
             data.recordset.map((r)=>{
+                var customPopup = `${F.setMoneda(r.DESDE,'Q')}`;
+                var optionPopup = {
+                                className:'popupCustom',
+                                closeOnClick: false, 
+                                autoClose: false,
+                                closeButton: false,
+                                onClick: ()=>{get_detalles_proyecto(r)}
+                            }
                 let lat = r.LATITUD;
                 let long = r.LONGITUD;
                 L.marker([lat, long])
                     .addTo(mapa)
-                    .bindPopup(`${r.NOMBRE}`, {closeOnClick: false, autoClose: false})
+                    .bindPopup(customPopup, optionPopup)
                     .on("click",function(e) {
-                          this.openPopup();
+                          //this.openPopup();
                           get_detalles_proyecto(r)
                           var position = e.target._latlng;
                     })
                     .on("mouseover",function(e) {
-                        this.openPopup();
+                        //this.openPopup();
                     })
                     .on("mouseout",function(e) {
-                        this.closePopup();
+                        //this.closePopup();
                     })
+                    .openPopup()
             })
               
           
@@ -137,6 +146,23 @@ function cargar_lotes(){
 
 
 function cargar_proyectos(){
+
+    let container = document.getElementById('root_proyectos');
+    container.innerHTML = GlobalLoader;
+
+    get_data_locations()
+    .then((data)=>{
+       
+        cargar_mapa(data);
+     })
+
+
+
+};
+
+function BACKUP_cargar_proyectos(){
+    return;
+
     let container = document.getElementById('root_proyectos');
     container.innerHTML = GlobalLoader;
 
@@ -178,3 +204,9 @@ function cargar_proyectos(){
 
 };
 
+
+function solicitar_cotizacion(){
+    
+
+
+}

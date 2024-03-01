@@ -5,6 +5,12 @@
     box-shadow: 5px 5px 5px #888;
 }
 
+.popupCustom .leaflet-popup-tip,
+.popupCustom .leaflet-popup-content-wrapper {
+    background: #020363;
+    color: #b4e4f8;
+}
+
 
 .btn-left { 
     position: fixed;

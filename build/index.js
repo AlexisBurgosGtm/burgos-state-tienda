@@ -100,8 +100,8 @@ function verificar_proyecto_compartido(){
     
             root_datos_proyecto.innerHTML = card_proyecto(`${data.CODIGO}`,`${data.NOMBRE}`,`${data.DIRECCION}`,`${data.MUNICIPIO}`,`${data.LATITUD}`,`${data.LONGITUD}`,`${data.DESDE}`,`${data.AREA}`,`${data.FOTO_LOGO}`,`${data.FOTO_PORTADA}`,`${data.FOTO_UNO}`,`${data.FOTO_DOS}`,`${data.FOTO_TRES}`,`${data.FOTO_VIDEO}`,`${data.TIPOPAGO}`,`${data.DETALLES}`);
         
-            document.getElementById('btnAtrasUno').style="visibility:hidden";
-            document.getElementById('btnAtrasDos').style="visibility:visible";
+            document.getElementById('btnAtrasUno').style="visibility:visible";
+            document.getElementById('btnAtrasDos').style="visibility:hidden";
         
             location.hash = "#card_detalle";
             location.hash = '';
