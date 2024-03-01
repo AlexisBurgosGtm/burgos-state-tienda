@@ -147,8 +147,8 @@ function cargar_lotes(){
 
 function cargar_proyectos(){
 
-    let container = document.getElementById('root_proyectos');
-    container.innerHTML = GlobalLoader;
+    //let container = document.getElementById('root_proyectos');
+    //container.innerHTML = GlobalLoader;
 
     get_data_locations()
     .then((data)=>{

@@ -12,6 +12,10 @@
 }
 
 
+.cursiva {
+  font-style: italic;
+}
+
 .btn-left { 
     position: fixed;
     z-index: 1088;
