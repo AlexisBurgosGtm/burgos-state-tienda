@@ -39,6 +39,18 @@ function get_tab(nombre){
             dos.classList.remove('active');
             tres.classList.remove('active');
             cuatro.classList.remove('active');
+
+            try {
+                map.invalidateSize();    
+            } catch (error) {
+                
+            }
+            try {
+                mapa.invalidateSize();    
+            } catch (error) {
+                
+            }
+        
             
             break;
         case 'dos':
